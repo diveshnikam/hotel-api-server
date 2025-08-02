@@ -1,10 +1,12 @@
 const mongoose = require("mongoose");
 const Hotel = require("./models/hotel.model");
+const cors = require("cors")
 const { initDatabase } = require("./db/db.connect");
 const express = require("express")
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 initDatabase();
 
